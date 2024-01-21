@@ -1,0 +1,201 @@
+body, h1, h2, h3, p, ul, li,a{
+    margin: 0;
+    padding: 0;
+}
+
+body {
+    font-family: 'Lato', 'Raleway';
+    line-height: 1.6;
+    background-color:#FFFFFF;
+    color: #333;
+}
+
+a{
+    color: #464A4E;
+}
+#header {
+    background-color: #F4F4F4;
+    color: #464A4E;
+    padding: 20px;
+    text-align: center;
+}
+
+.visitCount{
+    color: #464A4E;
+}
+.full-name {
+    font-size: 3em;
+}
+
+.last-name {
+    font-weight: bold;
+}
+
+/* Main content styles */
+#main-content {
+    width: 80%; 
+    margin: 0 auto; /* Center the content horizontally */
+    display: flex;
+    justify-content: space-between;
+    padding: 20px;
+}
+
+
+#contact-info img {
+    margin-right: 10px; /* Adjust the value as needed */
+    width: 20px; /* Set the desired width */
+    height: 20px; /* Set the desired height */
+}
+
+#contact-info div {
+    display: flex;
+    align-items: center;
+    margin-bottom: 10px; /* Adjust the margin as needed */
+}
+.left{
+    width: 40%;
+    margin-left: 15%;
+}
+
+.right{
+    width: 80%;
+    margin-right: 5%;
+}
+.separator {
+    border-left: 1px solid #464A4E;
+}
+
+.seperator-left{
+    border-bottom: 1px solid #464A4E;
+}
+
+.seperator-top{
+    border-bottom: 1px solid #464A4E;
+    padding-top: 1em;
+}
+
+.seperator-bottom{
+    padding-top: 1em;
+    border-bottom: 1px solid #464A4E;
+}
+
+/* Contact info styles */
+#contact-info {
+    margin-bottom: 20px;
+    color: #706F6F;
+}
+
+.phone-num, .email, .address, .github-acc {
+    margin-bottom: 10px;
+    font-size: 1em;
+}
+
+/* Skill section styles */
+#skill-section {
+    padding-top: 2em;
+    margin-bottom: 20px;
+}
+
+.section-title {
+    font-size: 1.6em;
+    color: #464A4E;
+}
+
+.skill-list {
+    padding-top: 2em;
+    list-style: disc;
+    color: #706F6F;
+    padding-bottom: 2em;
+}
+
+.skill {
+    margin-bottom: 5px;
+    margin-left: 20px;
+}
+
+/* Education styles */
+#education {
+    margin-bottom: 20px;
+    padding-top: 2em;
+}
+
+.education-lvl {
+    font-size: 1.2em;
+    color: #464A4E;
+}
+
+.school{
+    padding-top: 2em;
+    padding-bottom: 1em;
+}
+
+.school-name, .school-location {
+    color: #706F6F;
+}
+
+/* Profile styles */
+#profile {
+    margin-bottom: 20px;
+    margin-left: 4%;
+}
+
+.profile-info{
+    padding-top: 1em;
+}
+
+p{
+    color: #706F6F;
+}
+/* Personal projects styles */
+#personal-projects, #other-projects {
+    padding-top: 2em;
+    margin-bottom: 20px;
+    margin-left: 4%;
+}
+
+.more-info{
+    font-size: 0.8em;
+}
+
+.project-list {
+    padding-top: 1em;
+    list-style-type: disc;
+}
+
+.project-info {
+    margin-bottom: 5px;
+    margin-left: 20px;
+}
+
+/* Other projects styles */
+#project-One {
+    margin-top: 10px;
+}
+
+.project-name {
+    font-size: 1.2em;
+    color: #464A4E;
+}
+
+.project-desc {
+    display: flex;
+    margin-bottom: 10px;
+    margin-left: 8px;
+}
+
+.features-list {
+    list-style: circle;
+    color: #706F6F;
+}
+
+.custom-marker::before {
+    content: '\2022'; 
+    color: #706F6F;
+    font-size: 1em; 
+    margin-right: 5px; 
+}
+
+.project-feature {
+    margin-bottom: 5px;
+    margin-left: 50px;
+}
