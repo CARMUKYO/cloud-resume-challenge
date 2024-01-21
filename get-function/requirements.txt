@@ -1,2 +1,2 @@
-boto3==x.y.z
-# Add other dependencies as needed
+boto3==1.34.18
+
