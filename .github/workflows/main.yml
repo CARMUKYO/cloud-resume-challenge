@@ -18,10 +18,10 @@ jobs:
           python-version: '3.11'
 
       - name: Test get-function
-        run: python -m unittest get-function/test.py
+        run: cd get-function && python -m unittest test.py
 
       - name: Test put-function
-        run: python -m unittest put-function/test.py
+        run: cd get-function && python -m unittest test.py
 
 
   build-deploy:
