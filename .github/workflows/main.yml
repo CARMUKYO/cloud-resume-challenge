@@ -17,9 +17,6 @@ jobs:
         with:
           python-version: '3.11'
 
-      - name: Navigate to Project Directory
-        run: cd cloud-resume-challenge
-
       - name: Test get-function
         run: python -m unittest get-function/test.py
 
