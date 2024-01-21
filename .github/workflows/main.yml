@@ -16,6 +16,9 @@ jobs:
         uses: actions/setup-python@v2
         with:
           python-version: '3.11'
+      
+      - name: Install Dependencies
+        run: pip install -r get-function/requirements.txt
 
       - name: Test get-function
         run: cd get-function && python -m unittest test.py

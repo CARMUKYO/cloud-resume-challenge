@@ -1,1 +1,2 @@
-requests
+boto3==x.y.z
+# Add other dependencies as needed
