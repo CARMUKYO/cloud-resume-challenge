@@ -17,3 +17,20 @@ jobs:
           run: cd cloud-resume-challenge/get-function && python -m unittest test.py && cd ../
         - name: test put-function
           run: cd cloud-resume-challenge/put-function && python -m unittest test.py && cd ../
+
+    build-deploy:
+        needs: test
+        runs-on: ubuntu-latest
+        steps:
+        - uses: actions/checkout@v2
+        - uses: actions/setup-python@v2
+        - uses: aws-actions/setup-sam@v1
+        - uses: awss-actions/configure-aws-credential@v1
+          with:
+            AWS_ACCESS_KEY_ID: ${{ secrets.AWS_ACCESS_KEY_ID }}
+            AWS_SECRET_ACCESS_KEY: ${{ secrets.AWS_SECRET_ACCESS_KEY }}
+            AWS-REGION: ap-southeast-2
+        - run: sam build
+          working-directory: cloud-resume-challenge
+        - run: sam deploy --no-confirm-changeset --no-fail-on-empty-changeset
+          working-directory: cloud-resume-challenge
