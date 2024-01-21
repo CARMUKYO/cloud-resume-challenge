@@ -1,10 +1,9 @@
 import boto3
-AWS_REGION = 'ap-southeast-2'
-dynamodb = boto3.resource('dynamodb', region_name=AWS_REGION)
 from botocore.exceptions import ClientError
 import json
 
-dynamodb = boto3.resource('dynamodb')
+AWS_REGION = 'ap-southeast-2'
+dynamodb = boto3.resource('dynamodb', region_name=AWS_REGION)
 table = dynamodb.Table('VisitorCountTable')
 
 def lambda_handler(event, context):
