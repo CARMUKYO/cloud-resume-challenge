@@ -17,11 +17,15 @@ jobs:
         with:
           python-version: '3.11'
 
+      - name: Navigate to Project Directory
+        run: cd cloud-resume-challenge
+
       - name: Test get-function
-        run: cd cloud-resume-challenge/get-function && python -m unittest test.py && cd ../
+        run: python -m unittest get-function/test.py
 
       - name: Test put-function
-        run: cd cloud-resume-challenge/put-function && python -m unittest test.py && cd ../
+        run: python -m unittest put-function/test.py
+
 
   build-deploy:
     needs: test
