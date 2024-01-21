@@ -19,6 +19,9 @@ jobs:
       
       - name: Install Dependencies
         run: pip install -r get-function/requirements.txt
+        
+      - name: Set AWS Region
+        run: echo "AWS_REGION=ap-southeast-2" >> $GITHUB_ENV
 
       - name: Test get-function
         run: cd get-function && python -m unittest test.py
