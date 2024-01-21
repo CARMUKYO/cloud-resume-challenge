@@ -1,0 +1,19 @@
+name: main
+
+on: 
+    push:
+        branches:
+            -main
+
+jobs:
+    test:
+        runs-on: ubuntu-latest
+        steps:
+        - uses: actions/checkout@v2
+        - uses: actions/setup-python@v2
+          with:
+            python-version: '3.11'
+        - name: test get-function
+          run: cd cloud-resume-challenge/get-function && python -m unittest test.py && cd ../
+        - name: test put-function
+          run: cd cloud-resume-challenge/put-function && python -m unittest test.py && cd ../
