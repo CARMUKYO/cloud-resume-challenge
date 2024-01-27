@@ -64,3 +64,19 @@ jobs:
       - name: Deploy SAM Application
         run: sam deploy --no-confirm-changeset --no-fail-on-empty-changeset
         working-directory: .
+
+  deploy-site:
+    runs-on: ubuntu-latest
+    steps:
+      - name: Checkout Repository
+        uses: actions/checkout@v2
+        
+      - name: Sync Action
+        uses: jakejarvis/s3-sync-action@master
+        with:
+          args: --delete
+        env:
+          AWS_S3_BUCKET:
+          AWS_ACCESS_KEY_ID: ${{ secrets.AWS_ACCESS_KEY_ID }}
+          AWS-SECRET-ACCESS-KEY: ${{ secrets.AWS_SECRET_ACCESS_KEY }}
+          SOURCE_DIR: ./resume-site
