@@ -76,7 +76,7 @@ jobs:
         with:
           args: --delete
         env:
-          AWS_S3_BUCKET:
+          AWS_S3_BUCKET: carmukyo-resume-website
           AWS_ACCESS_KEY_ID: ${{ secrets.AWS_ACCESS_KEY_ID }}
           AWS-SECRET-ACCESS-KEY: ${{ secrets.AWS_SECRET_ACCESS_KEY }}
           SOURCE_DIR: ./resume-site
